@@ -1,0 +1,13 @@
+def ackermann(m, n):
+    print(f"ackermann({m}, {n})")
+    if m == 0:
+        result = n + 1
+    elif n == 0:
+        result = ackermann(m - 1, 1)
+    else:
+        result = ackermann(m - 1, ackermann(m, n - 1))
+    print(f"ackermann({m}, {n}) = {result}")
+    return result
+
+result = ackermann(3, 2)
+print(f"Resultado: {result}")
